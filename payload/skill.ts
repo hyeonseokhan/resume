@@ -12,7 +12,7 @@ const pl: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'Go',
+      title: 'Golang',
       level: 2,
     },
     {
@@ -35,6 +35,10 @@ const blockchain: ISkill.Skill = {
     },
     {
       title: 'Nexledger',
+      level: 3,
+    },
+    {
+      title: 'Aergo',
       level: 3,
     },
     {
