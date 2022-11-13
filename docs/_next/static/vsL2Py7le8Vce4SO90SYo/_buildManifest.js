@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:docs/_next/static/vsL2Py7le8Vce4SO90SYo/_buildManifest.js
-self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fa9a7754c.8f83107d1e66b5050a61.js","static\u002Fchunks\u002Fcb1608f2.571ab0ddc5e1e670997a.js","static\u002Fchunks\u002F0f1ac474.3febc725da045b754233.js","static\u002Fchunks\u002Fpages\u002Findex-a86fdf4c51ec525993a3.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error-cb6685cdcea506c8b6dd.js"],sortedPages:["\u002F","\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
-========
-self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fa9a7754c.b3d3c83d86eb1d96164a.js","static\u002Fchunks\u002Fcb1608f2.b4f763aa0be4c4652e63.js","static\u002Fchunks\u002F0f1ac474.3febc725da045b754233.js","static\u002Fchunks\u002Fpages\u002Findex-2c0619bbb41dc616d8ff.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error-cb6685cdcea506c8b6dd.js"],sortedPages:["\u002F","\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
->>>>>>>> origin/master:docs/_next/static/9PcDAQy7MRYLFEigzzV70/_buildManifest.js
