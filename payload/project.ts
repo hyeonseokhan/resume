@@ -6,6 +6,7 @@ const project: IProject.Payload = {
     {
       title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 개발',
       startedAt: '2022-02',
+      endedAt: '2022-12',
       where: '드림시큐리티',
       descriptions: [
         { content: 'Hyperledger Fabric 상용화를 위한 기술, 정책, 성능개선 검토 담당.' },

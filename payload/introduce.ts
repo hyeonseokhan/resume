@@ -10,7 +10,7 @@ const introduce: IIntroduce.Payload = {
     '최근에는 허가형 블록체인 플랫폼인 Hyperledger Fabric의 성능 개선 및 실사용 측면에 관심이 있습니다.',
     'I am an experienced application developer using decentralized identity (DID) and blockchain based on the technology of the Public Key Infrastructure (PKI) security authentication solution.',
     'I was mainly in charge of RESTful API backend development using the Java spring framework. Furthermore, I like to focus on the process of considering and solving problems that occurs during any of project progresses.',
-    'In addition, I recently got interested in the performance improvement and practical use of Hyperledger Fabric, a permissioned blockchain platform.',
+    'In addition, I recently got interested in the performance improvement and practical use of Hyperledger Fabric a permission blockchain platform.',
   ],
   sign: author.name,
   latestUpdated: lastestUpdatedAt,
