@@ -60,7 +60,7 @@ const devops: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'Maven/Gradle',
+      title: 'Gradle',
       level: 3,
     },
     {
@@ -68,8 +68,8 @@ const devops: ISkill.Skill = {
       level: 2,
     },
     {
-      title: 'Git',
-      level: 1,
+      title: 'Github/Gitlab',
+      level: 2,
     },
   ],
 };
@@ -117,6 +117,19 @@ const knowledge: ISkill.Skill = {
     },
     {
       title: 'IaC',
+      level: 2,
+    },
+    {
+      title: 'Hexagonal',
+      level: 2,
+    },
+
+    {
+      title: 'DDD',
+      level: 2,
+    },
+    {
+      title: 'TDD',
       level: 2,
     },
     {

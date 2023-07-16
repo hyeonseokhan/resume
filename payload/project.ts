@@ -4,6 +4,16 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
+      title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 고도화',
+      startedAt: '2023-01',
+      where: '드림시큐리티',
+      descriptions: [
+        { content: '제품 아키텍처 설계 리펙토링 참여' },
+        { content: 'Hyperledger Fabric Core 상위 버전 적용분석' },
+        { content: '사내 DID 플랫폼 연계 통합 작업 참여' },
+      ],
+    },
+    {
       title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 개발',
       startedAt: '2022-02',
       endedAt: '2022-12',
