@@ -34,16 +34,20 @@ const blockchain: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'Nexledger',
+      title: 'Nexledger SDS',
       level: 3,
     },
     {
-      title: 'Aergo',
+      title: 'Aergo Blocko',
       level: 3,
     },
     {
-      title: 'Monachain',
+      title: 'Monachain LG CNS',
       level: 2,
+    },
+    {
+      title: 'ChainZ SK C&C',
+      level: 1,
     },
   ],
 };
@@ -53,10 +57,6 @@ const devops: ISkill.Skill = {
   items: [
     {
       title: 'Docker',
-      level: 3,
-    },
-    {
-      title: 'Docker-Compose',
       level: 3,
     },
     {
