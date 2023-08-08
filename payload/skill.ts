@@ -64,12 +64,16 @@ const devops: ISkill.Skill = {
       level: 3,
     },
     {
+      title: 'Git',
+      level: 2,
+    },
+    {
       title: 'Terraform',
       level: 2,
     },
     {
-      title: 'Github/Gitlab',
-      level: 2,
+      title: 'Prometheus',
+      level: 1,
     },
   ],
 };
@@ -82,11 +86,15 @@ const env: ISkill.Skill = {
       level: 3,
     },
     {
-      title: 'Oracle Cloud',
+      title: 'OCI',
       level: 3,
     },
     {
-      title: 'Cloud(AWS, Naver)',
+      title: 'Off-premise',
+      level: 3,
+    },
+    {
+      title: 'On-premise',
       level: 2,
     },
   ],
@@ -95,6 +103,10 @@ const env: ISkill.Skill = {
 const knowledge: ISkill.Skill = {
   category: 'Knowledge',
   items: [
+    {
+      title: 'Spring',
+      level: 3,
+    },
     {
       title: 'PKI',
       level: 3,
@@ -123,7 +135,6 @@ const knowledge: ISkill.Skill = {
       title: 'Hexagonal',
       level: 2,
     },
-
     {
       title: 'DDD',
       level: 2,
@@ -134,6 +145,10 @@ const knowledge: ISkill.Skill = {
     },
     {
       title: 'MSA',
+      level: 1,
+    },
+    {
+      title: 'Modular Monolithic',
       level: 1,
     },
   ],

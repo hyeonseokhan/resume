@@ -4,28 +4,17 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 고도화',
-      startedAt: '2023-01',
-      where: '드림시큐리티',
-      descriptions: [
-        { content: '제품 아키텍처 설계 리펙토링 참여' },
-        { content: 'Hyperledger Fabric Core 상위 버전 적용분석' },
-        { content: '사내 DID 플랫폼 연계 통합 작업 참여' },
-      ],
-    },
-    {
-      title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 개발',
+      title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 신규 제품 개발',
       startedAt: '2022-02',
-      endedAt: '2022-12',
       where: '드림시큐리티',
       descriptions: [
-        { content: 'Hyperledger Fabric 상용화를 위한 기술, 정책, 성능개선 검토 담당.' },
+        { content: 'Hyperledger Fabric 상용화를 위한 기술, 정책, 성능개선 검토' },
         {
-          content:
-            'RESTful API 아키텍처의 블록체인 네트워크 노드구성, 구축, 관리, 모니터링 기능 설계 및 개발 담당.',
+          content: '사용자화 블록체인 구축, 관리 및 모니터링 기능의 RESTful API 설계 및 개발.',
         },
         { content: '스마트컨트랙트 비즈니스로직 개발(Golang, Java)' },
-        { content: 'TTA 블록체인 플랫폼 시험 합의서 검토 및 대응 담당.' },
+        { content: 'TTA 블록체인 플랫폼 시험 합의서 검토 및 대응' },
+        { content: 'PL 직무 및 개발실무 담당' },
       ],
     },
     {
