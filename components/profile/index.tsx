@@ -44,7 +44,8 @@ function createNameArea(name: Payload['name']) {
     <Row>
       <Col className="text-center text-md-left">
         <h1 style={Style.blue}>
-          {name.title} <small>{name.small || ''}</small>
+          {name.title}
+          <small>{name.small ? `(${name.small})` : ''}</small>
         </h1>
       </Col>
     </Row>
