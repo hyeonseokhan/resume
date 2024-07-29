@@ -22,10 +22,6 @@ module.exports = {
     jest: true,
     node: true,
   },
-  globals: {
-    // cy: true,
-    // Cypress: true,
-  },
   rules: {
     'no-underscore-dangle': 0,
     '@typescript-eslint/no-namespace': 0,
@@ -34,6 +30,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/extensions': 0,
     'react/react-in-jsx-scope': 0,
+    'react/jsx-props-no-spreading': 'off',
     quotes: [
       2,
       'single',

@@ -1,12 +1,29 @@
 {
-  "name": "resume-nextjs",
-  "lastestUpdatedAt": "2024-07-22",
-  "version": "1.2.4",
-  "description": "Static HTML based RESUME made with next.js",
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Static HTML based online resume",
   "main": "index.js",
+  "lastestUpdatedAt": "2024-07-29",
+  "homepage": "https://hyeonseokhan.github.io/resume",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyeonseokhan/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "next.js"
+  ],
+  "author": {
+    "name": "Hyeonseok Han",
+    "email": "toycode727@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyeonseokhan/resume/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env DEBUG=yosume:* NODE_OPTIONS=--openssl-legacy-provider next",
+    "dev": "cross-env DEBUG=resume:* NODE_OPTIONS=--openssl-legacy-provider next",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
     "prebuild": "npm install && npm run lint",
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
@@ -15,27 +32,8 @@
     "preexport": "npm run clean && npm run build",
     "postexport": "node shellwork.js",
     "clean": "npx rimraf docs .next",
-    "lint": "eslint \"component/**/*\" \"pages/**/*\" \"payload/**/*\" \"*.ts\" --fix",
+    "lint": "eslint \"components/**/*\" \"pages/**/*\" \"payload/**/*\" \"*.ts\" --fix",
     "typedoc": "typedoc --excludeExternals"
-  },
-  "homepage": "https://uyu423.github.io/resume-nextjs",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uyu423/resume-nextjs.git"
-  },
-  "keywords": [
-    "resume",
-    "next"
-  ],
-  "author": {
-    "name": "Yowu Yu",
-    "email": "me@yowu.dev",
-    "url": "https://yowu.dev"
-  },
-  "contributors": [],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/uyu423/resume-nextjs/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -56,7 +54,9 @@
     "react-dom": "^17.0.2",
     "reactstrap": "^8.9.0",
     "shelljs": "^0.8.5",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
   },
   "devDependencies": {
     "@types/luxon": "^1.27.1",
