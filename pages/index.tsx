@@ -1,45 +1,47 @@
-/* eslint-disable react/jsx-props-no-spreading */
+import { NextSeo } from 'next-seo';
+import Head from 'next/head'; // NOTE next/document 와 혼돈하면 안됨
 import { Container } from 'reactstrap';
 
-import Head from 'next/head';
-import { NextSeo } from 'next-seo';
-import { Education } from '../components/education';
-import { Etc } from '../components/etc';
-import { Experience } from '../components/experience';
-import { Footer } from '../components/footer';
-import { Introduce } from '../components/introduce';
-import { OpenSource } from '../components/openSource';
-import { Presentation } from '../components/presentation';
 import { Profile } from '../components/profile';
-import { Project } from '../components/project';
+import { Introduce } from '../components/introduce';
 import { Skill } from '../components/skill';
-import { Style } from '../components/common/Style';
-import Payload from '../payload';
+import { Experience } from '../components/experience';
+import { Project } from '../components/project';
+import { OpenSource } from '../components/openSource';
 import { Article } from '../components/article';
+import { Education } from '../components/education';
+import { Footer } from '../components/footer';
+import { Style } from '../components/common/Style';
+import { DownloadButton } from '../components/common';
 
-function Yosume() {
+import ContentsPayload from '../payload';
+
+function ResumeComponents() {
   return (
     <>
-      <NextSeo {...Payload._global.seo} />
+      <NextSeo {...ContentsPayload._global.seo} />
       <Head>
-        <title>{Payload._global.headTitle}</title>
-        <link rel="shortcut icon" href={Payload._global.favicon} />
+        <title>{ContentsPayload._global.headTitle}</title>
+        <link rel="shortcut icon" href={ContentsPayload._global.favicon} />
       </Head>
-      <Container style={Style.global}>
-        <Profile.Component payload={Payload.profile} />
-        <Introduce.Component payload={Payload.introduce} />
-        <Skill.Component payload={Payload.skill} />
-        <Experience.Component payload={Payload.experience} />
-        <Project.Component payload={Payload.project} />
-        <OpenSource.Component payload={Payload.openSource} />
-        <Presentation.Component payload={Payload.presentation} />
-        <Article.Component payload={Payload.article} />
-        <Education.Component payload={Payload.education} />
-        <Etc.Component payload={Payload.etc} />
-        <Footer.Component payload={Payload.footer} />
-      </Container>
+      <div style={Style.box}>
+        <div id="pdfArea">
+          <Container style={Style.globalFont}>
+            <Profile.Component payload={ContentsPayload.profile} />
+            <Introduce.Component payload={ContentsPayload.introduce} />
+            <Skill.Component payload={ContentsPayload.skill} />
+            <Experience.Component payload={ContentsPayload.experience} />
+            <Project.Component payload={ContentsPayload.project} />
+            <OpenSource.Component payload={ContentsPayload.openSource} />
+            <Article.Component payload={ContentsPayload.article} />
+            <Education.Component payload={ContentsPayload.education} />
+            <Footer.Component payload={ContentsPayload.footer} />
+          </Container>
+        </div>
+      </div>
+      <DownloadButton />
     </>
   );
 }
 
-export default Yosume;
+export default ResumeComponents;
