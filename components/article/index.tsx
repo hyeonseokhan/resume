@@ -4,7 +4,6 @@ import { IArticle } from './IArticle';
 import { EmptyRowCol } from '../common';
 import { CommonSection } from '../common/CommonSection';
 import { CommonDescriptions } from '../common/CommonDescriptions';
-import Util from '../common/Util';
 
 type Payload = IArticle.Payload;
 
@@ -26,10 +25,6 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 }
 
 function ArticleRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const log = Util.debug('ArticleRow');
-
-  log(payload);
-
   return (
     <EmptyRowCol>
       <CommonDescriptions descriptions={payload.list} />

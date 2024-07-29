@@ -58,9 +58,7 @@ enum LUXON_DATE_FORMAT {
 }
 
 function getFormattingDuration(from: DateTime, to: DateTime = DateTime.local()) {
-  const log = debug('Util:getFormattingDuration');
   const diff = to.plus({ month: 1 }).diff(from);
-  log(diff.milliseconds, diff.get('years'));
   const format =
     diff.milliseconds < 31536000000
       ? LUXON_DATE_FORMAT.DURATION_KINDNESS_ONLY_MONTH
