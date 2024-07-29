@@ -1,6 +1,6 @@
 import favicon from '../asset/favicon.ico';
 import previewImage from '../asset/preview.jpg';
-import { IGlobal } from '../component/common/IGlobal';
+import { IGlobal } from '../components/common/IGlobal';
 
 const title = 'RESUME-NEXTJS Sample Page';
 const description = 'This is a simple web resume sample.';

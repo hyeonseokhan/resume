@@ -1,4 +1,4 @@
-import { IOpenSource } from '../component/openSource/IOpenSource';
+import { IOpenSource } from '../components/openSource/IOpenSource';
 
 const openSource: IOpenSource.Payload = {
   disable: false,

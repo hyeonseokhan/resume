@@ -1,4 +1,4 @@
-import { IArticle } from '../component/article/IArticle';
+import { IArticle } from '../components/article/IArticle';
 
 const article: IArticle.Payload = {
   disable: false,

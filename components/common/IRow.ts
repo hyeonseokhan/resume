@@ -33,7 +33,7 @@ export declare namespace IRow {
      *
      * @default 'DEFAULT'
      * @description Pretendard 에서 font-weight 300 을 DEFAULT 로 사용하고 있다.
-     * @see https://github.com/uyu423/resume-nextjs/blob/master/component/common/CommonRow.tsx
+     * @see https://github.com/uyu423/resume-nextjs/blob/master/components/common/CommonRow.tsx
      */
     weight?: FontWeightType;
 

@@ -12,18 +12,18 @@ import footer from './footer';
 
 import { _global } from './_global';
 
-import { IProfile } from '../component/profile/IProfile';
-import { IIntroduce } from '../component/introduce/IIntroduce';
-import { ISkill } from '../component/skill/ISkill';
-import { IOpenSource } from '../component/openSource/IOpenSource';
-import { IExperience } from '../component/experience/IExperience';
-import { IProject } from '../component/project/IProject';
-import { IPresentation } from '../component/presentation/IPresentation';
-import { IEducation } from '../component/education/IEducation';
-import { IEtc } from '../component/etc/IEtc';
-import { IFooter } from '../component/footer/IFooter';
-import { IGlobal } from '../component/common/IGlobal';
-import { IArticle } from '../component/article/IArticle';
+import { IProfile } from '../components/profile/IProfile';
+import { IIntroduce } from '../components/introduce/IIntroduce';
+import { ISkill } from '../components/skill/ISkill';
+import { IOpenSource } from '../components/openSource/IOpenSource';
+import { IExperience } from '../components/experience/IExperience';
+import { IProject } from '../components/project/IProject';
+import { IPresentation } from '../components/presentation/IPresentation';
+import { IEducation } from '../components/education/IEducation';
+import { IEtc } from '../components/etc/IEtc';
+import { IFooter } from '../components/footer/IFooter';
+import { IGlobal } from '../components/common/IGlobal';
+import { IArticle } from '../components/article/IArticle';
 
 const Payload: Payload = {
   profile,

@@ -1,4 +1,4 @@
-import { IProject } from '../component/project/IProject';
+import { IProject } from '../components/project/IProject';
 
 const project: IProject.Payload = {
   disable: false,
