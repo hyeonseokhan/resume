@@ -164,6 +164,7 @@ const misc: ISkill.Skill = {
 
 const skill: ISkill.Payload = {
   disable: false,
+  disableLevel: false,
   skills: [
     programmingLanguages,
     kernelDevelopment,

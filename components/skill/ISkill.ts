@@ -3,6 +3,7 @@ import { ICommon } from '../common/ICommon';
 export declare namespace ISkill {
   export interface Payload extends ICommon.SectionEnableFlag {
     skills: Skill[];
+    disableLevel?: boolean;
   }
 
   export interface Skill {
