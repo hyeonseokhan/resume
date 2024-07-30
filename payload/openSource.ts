@@ -12,7 +12,7 @@ const openSource: IOpenSource.Payload = {
         },
         {
           content: 'Github Stars ',
-          postImage: 'https://img.shields.io/github/stars/hyeonseokhan/resume.svg?style=popout',
+          postImage: 'https://img.shields.io/github/stars/hyeonseokhan/resume?style=popout',
         },
       ],
     },
