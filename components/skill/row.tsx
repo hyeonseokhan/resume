@@ -3,11 +3,17 @@ import React, { PropsWithChildren, useEffect, useState } from 'react';
 
 import { ISkill } from './ISkill';
 import { Style } from '../common/Style';
+import Util from '../common/Util';
 
 export default function SkillRow({
   skill,
   index,
-}: PropsWithChildren<{ skill: ISkill.Skill; index: number }>) {
+  disableLevel,
+}: PropsWithChildren<{
+  skill: ISkill.Skill;
+  index: number;
+  disableLevel: ISkill.Payload['disableLevel'];
+}>) {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
 
   useEffect(() => {
@@ -29,14 +35,18 @@ export default function SkillRow({
           <h4 style={Style.gray}>{skill.category}</h4>
         </Col>
         <Col sm={12} md={9}>
-          {createCalculatedSkillItems(skill.items, isMobileScreen)}{' '}
+          {createCalculatedSkillItems(skill.items, isMobileScreen, disableLevel)}{' '}
         </Col>
       </Row>
     </div>
   );
 }
 
-function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: boolean) {
+function createCalculatedSkillItems(
+  items: ISkill.Item[],
+  isVerticalScreen: boolean,
+  disableLevel: ISkill.Payload['disableLevel'],
+) {
   const layer = 3;
   const splitPoint = Math.ceil(items.length / layer);
   const list: ISkill.Item[][] = [];
@@ -52,7 +62,7 @@ function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: bool
             {items.map((skill, skillIndex) => {
               return (
                 <li key={skillIndex.toString()}>
-                  {createBadge(skill.level)}
+                  {createBadge(disableLevel, skill.level)}
                   {skill.title}
                 </li>
               );
@@ -72,7 +82,7 @@ function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: bool
               {skills.map((skill, skillIndex) => {
                 return (
                   <li key={skillIndex.toString()}>
-                    {createBadge(skill.level)}
+                    {createBadge(disableLevel, skill.level)}
                     {skill.title}
                   </li>
                 );
@@ -85,8 +95,10 @@ function createCalculatedSkillItems(items: ISkill.Item[], isVerticalScreen: bool
   );
 }
 
-function createBadge(level?: ISkill.Item['level']) {
-  if (!level) {
+function createBadge(disableLevel: ISkill.Payload['disableLevel'], level?: ISkill.Item['level']) {
+  const log = Util.debug('createBadge');
+  log(disableLevel);
+  if (disableLevel) {
     return '';
   }
 

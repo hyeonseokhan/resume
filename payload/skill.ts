@@ -154,6 +154,7 @@ const tools: ISkill.Skill = {
 
 const skill: ISkill.Payload = {
   disable: false,
+  disableLevel: false,
   skills: [programmingLanguages, blockchain, infra, knowledge, tools],
 };
 
