@@ -1,5 +1,5 @@
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 
 import { IProfile } from '../components/profile/IProfile';
@@ -11,13 +11,13 @@ const profile: IProfile.Payload = {
 
   image,
   name: {
-    title: 'Sample Title',
-    small: 'Sub Title',
+    title: 'Hyeonseok Han',
+    small: '한현석',
   },
   contact: [
     {
-      title: 'tux@linux.org',
-      link: 'mailto:tux@linux.org',
+      title: 'toycode727@gmail.com',
+      link: 'mailto:toycode727@gmail.com',
       icon: faEnvelope,
     },
     {
@@ -26,17 +26,16 @@ const profile: IProfile.Payload = {
       badge: true,
     },
     {
-      link: 'https://github.com/uyu423/resume-nextjs',
+      link: 'https://github.com/hyeonseokhan',
       icon: faGithub,
     },
     {
-      link: 'https://www.facebook.com/groups/ubuntu.ko',
-      icon: faFacebook,
+      link: 'https://www.linkedin.com/in/toycode',
+      icon: faLinkedin,
     },
   ],
   notice: {
-    title:
-      "The content below is all fictitious and is just a sample from 'https://github.com/uyu423/resume-nextjs'.",
+    title: 'Open to new opportunities and challenges 🧑🏻‍💻',
     icon: faBell,
   },
 };
