@@ -1,153 +1,163 @@
 import { ISkill } from '../components/skill/ISkill';
 
 const programmingLanguages: ISkill.Skill = {
-  category: 'Languages',
+  category: 'Programming Languages',
   items: [
     {
-      title: 'Java',
+      title: 'C',
       level: 3,
     },
     {
-      title: 'JavaScript',
+      title: 'Shell Scripting',
       level: 3,
+    },
+    {
+      title: 'Python',
+      level: 3,
+    },
+    {
+      title: 'Perl',
+      level: 2,
     },
     {
       title: 'Golang',
       level: 2,
     },
     {
-      title: 'C/C++',
-      level: 2,
-    },
-  ],
-};
-
-const blockchain: ISkill.Skill = {
-  category: 'Blockchain',
-  items: [
-    {
-      title: 'Hyperledger Fabric',
-      level: 3,
-    },
-    {
-      title: 'Nexledger SDS',
-      level: 3,
-    },
-    {
-      title: 'Aergo Blocko',
-      level: 3,
-    },
-    {
-      title: 'Monachain LG CNS',
-      level: 2,
-    },
-    {
-      title: 'ChainZ SK C&C',
+      title: 'Rust',
       level: 1,
     },
   ],
 };
 
-const infra: ISkill.Skill = {
-  category: 'Infrastructure',
+const kernelDevelopment: ISkill.Skill = {
+  category: 'Kernel Development',
   items: [
     {
-      title: 'OCI',
+      title: 'Kernel Programming',
       level: 3,
     },
+    {
+      title: 'GNU Debugger',
+      level: 3,
+    },
+    {
+      title: 'Memory Management',
+      level: 2,
+    },
+    {
+      title: 'System Call Interface',
+      level: 2,
+    },
+  ],
+};
+
+const virtualization: ISkill.Skill = {
+  category: 'Virtualization',
+  items: [
     {
       title: 'Docker',
       level: 3,
     },
     {
-      title: 'MySQL',
+      title: 'KVM',
       level: 3,
     },
     {
-      title: 'Terraform',
-      level: 1,
-    },
-    {
-      title: 'Apache',
-      level: 2,
-    },
-  ],
-};
-
-const knowledge: ISkill.Skill = {
-  category: 'Knowledge',
-  items: [
-    {
-      title: 'Spring',
-      level: 3,
-    },
-    {
-      title: 'PKI',
-      level: 3,
-    },
-    {
-      title: 'DID',
-      level: 3,
-    },
-    {
-      title: 'TSA',
-      level: 3,
-    },
-    {
-      title: 'CA',
+      title: 'Xen',
       level: 2,
     },
     {
-      title: 'SSL/TLS',
+      title: 'VirtualBox',
       level: 2,
     },
     {
-      title: 'IaC',
-      level: 2,
-    },
-    {
-      title: 'Hexagonal',
-      level: 2,
-    },
-    {
-      title: 'DDD',
-      level: 2,
-    },
-    {
-      title: 'TDD',
-      level: 2,
-    },
-    {
-      title: 'MSA',
-      level: 1,
-    },
-    {
-      title: 'Modular Monolithic',
+      title: 'VMware ESXi',
       level: 1,
     },
   ],
 };
 
-const tools: ISkill.Skill = {
-  category: 'Tools & IDEs',
+const automation: ISkill.Skill = {
+  category: 'Automation',
   items: [
     {
-      title: 'IDEA',
+      title: 'Ansible',
+      level: 3,
     },
     {
-      title: 'Eclipse',
+      title: 'Puppet',
+      level: 3,
     },
     {
-      title: 'VS code',
+      title: 'Chef',
+      level: 2,
     },
     {
-      title: 'Vim',
+      title: 'Jenkins',
+      level: 2,
     },
     {
-      title: 'Git',
+      title: 'CI/CD Pipelines',
+      level: 1,
     },
     {
-      title: 'Figma',
+      title: 'Infrastructure as Code',
+      level: 1,
+    },
+  ],
+};
+
+const networkSecurity: ISkill.Skill = {
+  category: 'Network Security',
+  items: [
+    {
+      title: 'iptables',
+      level: 3,
+    },
+    {
+      title: 'OpenSSH',
+      level: 3,
+    },
+    {
+      title: 'OpenSSL',
+      level: 2,
+    },
+    {
+      title: 'NACLs',
+      level: 2,
+    },
+    {
+      title: 'VPN Technologies',
+      level: 2,
+    },
+    {
+      title: 'Intrusion Detection',
+      level: 1,
+    },
+  ],
+};
+
+const misc: ISkill.Skill = {
+  category: 'Misc',
+  items: [
+    {
+      title: 'Coffee Brewing',
+    },
+    {
+      title: "Rubik's Cube Solving",
+    },
+    {
+      title: 'Table Tennis',
+    },
+    {
+      title: 'Guitar Playing',
+    },
+    {
+      title: 'Joke Telling',
+    },
+    {
+      title: 'Duct Tape Crafting',
     },
   ],
 };
@@ -155,7 +165,14 @@ const tools: ISkill.Skill = {
 const skill: ISkill.Payload = {
   disable: false,
   disableLevel: false,
-  skills: [programmingLanguages, blockchain, infra, knowledge, tools],
+  skills: [
+    programmingLanguages,
+    kernelDevelopment,
+    virtualization,
+    automation,
+    networkSecurity,
+    misc,
+  ],
 };
 
 export default skill;

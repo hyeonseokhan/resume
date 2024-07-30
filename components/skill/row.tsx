@@ -3,7 +3,6 @@ import React, { PropsWithChildren, useEffect, useState } from 'react';
 
 import { ISkill } from './ISkill';
 import { Style } from '../common/Style';
-import Util from '../common/Util';
 
 export default function SkillRow({
   skill,
@@ -96,8 +95,6 @@ function createCalculatedSkillItems(
 }
 
 function createBadge(disableLevel: ISkill.Payload['disableLevel'], level?: ISkill.Item['level']) {
-  const log = Util.debug('createBadge');
-  log(disableLevel);
   if (disableLevel) {
     return '';
   }

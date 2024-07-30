@@ -5,7 +5,6 @@ import { ISkill } from './ISkill';
 import SkillRow from './row';
 import { EmptyRowCol } from '../common';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
-import Util from '../common/Util';
 
 type Payload = ISkill.Payload;
 
@@ -19,8 +18,6 @@ export const Skill = {
 };
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const log = Util.debug('Component');
-  log(payload.disableLevel);
   const levelInfo = () => {
     if (payload.disableLevel) {
       return '';
