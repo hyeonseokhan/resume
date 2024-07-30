@@ -8,8 +8,8 @@ import { Skill } from '../components/skill';
 import { Experience } from '../components/experience';
 import { Project } from '../components/project';
 import { OpenSource } from '../components/openSource';
-import { Article } from '../components/article';
 import { Education } from '../components/education';
+import { Article } from '../components/article';
 import { Footer } from '../components/footer';
 import { Style } from '../components/common/Style';
 import { DownloadButton } from '../components/common';
@@ -33,8 +33,8 @@ function ResumeComponents() {
             <Experience.Component payload={ContentsPayload.experience} />
             <Project.Component payload={ContentsPayload.project} />
             <OpenSource.Component payload={ContentsPayload.openSource} />
-            <Article.Component payload={ContentsPayload.article} />
             <Education.Component payload={ContentsPayload.education} />
+            <Article.Component payload={ContentsPayload.article} />
             <Footer.Component payload={ContentsPayload.footer} />
           </Container>
         </div>
