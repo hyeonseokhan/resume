@@ -17,9 +17,10 @@ function Component({ payload }: PropsWithChildren<{ payload: IFooter.Payload }>)
           <EmptyRowCol>
             <small>
               v.{`${payload.version} / `}
-              <HrefTargetBlank url="https://github.com/uyu423/resume-nextjs" text="Github" />
+              <HrefTargetBlank url={payload.github} text="Github" />
               {' / '}
-              Thanks for <HrefTargetBlank url="https://blog.outsider.ne.kr/1234" text="Outsider" />
+              Thanks for{' '}
+              <HrefTargetBlank url="https://github.com/uyu423/resume-nextjs" text="Yongwoo Yu" />
             </small>
           </EmptyRowCol>
         </div>
