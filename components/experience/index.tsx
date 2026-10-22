@@ -48,21 +48,36 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 }
 
 function getFormattingExperienceTotalDuration(payload: IExperience.Payload) {
-  const periods = payload.list
-    .map((item) => {
-      return {
-        // 종료월도 근무한 달이므로 다음 달 1일을 구간 끝으로 둔다
-        endedAt: (item.endedAt
-          ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
-          : DateTime.local()
-        ).plus({ month: 1 }),
-        startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
-      };
-    })
-    .sort((a, b) => a.startedAt.toMillis() - b.startedAt.toMillis());
+  const periods = payload.list.map((item) => {
+    return {
+      title: item.title,
+      // 종료월도 근무한 달이므로 다음 달 1일을 구간 끝으로 둔다
+      endedAt: (item.endedAt
+        ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
+        : DateTime.local().startOf('month')
+      ).plus({ month: 1 }),
+      startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
+    };
+  });
 
-  // 기간이 겹치는 항목(겸임 등)을 두 번 세지 않도록 구간을 합친 뒤 더한다
-  const merged = periods.reduce<typeof periods>((acc, cur) => {
+  // 같은 회사는 첫 입사월부터 마지막 근무월까지를 재직기간으로 본다.
+  // 휴직처럼 항목 사이가 비어도 근속기간에 포함되기 때문이다.
+  const tenures = Object.values(
+    periods.reduce<Record<string, typeof periods[number]>>((acc, cur) => {
+      const prev = acc[cur.title];
+      acc[cur.title] = prev
+        ? {
+            title: cur.title,
+            startedAt: cur.startedAt < prev.startedAt ? cur.startedAt : prev.startedAt,
+            endedAt: cur.endedAt > prev.endedAt ? cur.endedAt : prev.endedAt,
+          }
+        : { ...cur };
+      return acc;
+    }, {}),
+  ).sort((a, b) => a.startedAt.toMillis() - b.startedAt.toMillis());
+
+  // 회사 간 재직기간이 겹치면(겸직 등) 두 번 세지 않도록 구간을 합친다
+  const merged = tenures.reduce<typeof tenures>((acc, cur) => {
     const last = acc[acc.length - 1];
     if (last && cur.startedAt <= last.endedAt) {
       last.endedAt = cur.endedAt > last.endedAt ? cur.endedAt : last.endedAt;
@@ -71,9 +86,10 @@ function getFormattingExperienceTotalDuration(payload: IExperience.Payload) {
     return [...acc, { ...cur }];
   }, []);
 
-  const totalExperience = merged
-    .map(({ endedAt, startedAt }) => endedAt.diff(startedAt))
-    .reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
+  const totalMonths = merged
+    .map(({ endedAt, startedAt }) => Math.round(endedAt.diff(startedAt, 'months').months))
+    .reduce((prev, cur) => prev + cur, 0);
+  const totalExperience = Duration.fromObject({ months: totalMonths }).shiftTo('years', 'months');
 
   return totalExperience.toFormat(`총 ${Util.LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
 }
