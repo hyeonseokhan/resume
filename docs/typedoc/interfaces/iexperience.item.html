@@ -85,6 +85,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#descriptions" class="tsd-kind-icon">descriptions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#endedat" class="tsd-kind-icon">ended<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#positions" class="tsd-kind-icon">positions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#skillkeywords" class="tsd-kind-icon">skill<wbr>Keywords</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#startedat" class="tsd-kind-icon">started<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iexperience.item.html#title" class="tsd-kind-icon">title</a></li>
@@ -97,13 +98,18 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="descriptions" class="tsd-anchor"></a>
-					<h3>descriptions</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> descriptions</h3>
 					<div class="tsd-signature tsd-kind-icon">descriptions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L14">experience/IExperience.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L16">experience/IExperience.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>positions</code> 를 쓰면 생략한다.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="endedat" class="tsd-anchor"></a>
@@ -111,19 +117,47 @@
 					<div class="tsd-signature tsd-kind-icon">ended<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L13">experience/IExperience.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L14">experience/IExperience.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="position" class="tsd-anchor"></a>
-					<h3>position</h3>
-					<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> position</h3>
+					<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L11">experience/IExperience.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L12">experience/IExperience.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>positions</code> 를 쓰면 생략한다.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="positions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> positions</h3>
+					<div class="tsd-signature tsd-kind-icon">positions<span class="tsd-signature-symbol">:</span> <a href="iexperience.position.html" class="tsd-signature-type">Position</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L24">experience/IExperience.ts:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#한-회사-안에서-맡은-직책이-여럿일-때-겸임-등" id="한-회사-안에서-맡은-직책이-여럿일-때-겸임-등" style="color: inherit; text-decoration: none;">
+								<h3>한 회사 안에서 맡은 직책이 여럿일 때 (겸임 등)</h3>
+							</a>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>description</dt>
+							<dd><p>값이 있으면 <code>position</code>·<code>descriptions</code>·<code>skillKeywords</code> 대신 직책별로 나눠 그린다.
+								회사 단위 기간은 <code>startedAt</code>·<code>endedAt</code> 이 그대로 맡는다.</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="skillkeywords" class="tsd-anchor"></a>
@@ -131,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">skill<wbr>Keywords<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L15">experience/IExperience.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L17">experience/IExperience.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -141,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">started<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L12">experience/IExperience.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L13">experience/IExperience.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/5d39b51/components/experience/IExperience.ts#L10">experience/IExperience.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/hyeonseokhan/resume/blob/c7998af/components/experience/IExperience.ts#L10">experience/IExperience.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -218,6 +252,9 @@
 								<a href="iexperience.item.html#position" class="tsd-kind-icon">position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iexperience.item.html#positions" class="tsd-kind-icon">positions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iexperience.item.html#skillkeywords" class="tsd-kind-icon">skill<wbr>Keywords</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -232,6 +269,9 @@
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
 						<a href="iexperience.payload.html" class="tsd-kind-icon">Payload</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="iexperience.position.html" class="tsd-kind-icon">Position</a>
 					</li>
 				</ul>
 			</nav>

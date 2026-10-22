@@ -4,6 +4,136 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
+      title: 'AX Store 사내 AI 도구 마켓플레이스 구축·운영',
+      startedAt: '2026-07',
+      where: '드림시큐리티',
+      descriptions: [
+        {
+          content:
+            '컨셉 목업을 로그인·도구 업로드/다운로드·후기가 동작하는 사내 서비스로 전환 (React SPA, Spring Boot)',
+        },
+        { content: '모듈러 모놀리식 + 헥사고날 구조로 설계하고 모듈 경계를 테스트로 강제' },
+        {
+          content:
+            'MCP 서버(Streamable HTTP)와 Spring Authorization Server 기반 OAuth 인가로 AI 에이전트에서 도구 검색·설치·등록',
+        },
+        {
+          content:
+            '도구 검수·운영 콘솔(Spring MVC, Thymeleaf), 도구 이슈 신고·회신, MCP 연계 사내 이벤트 운영',
+        },
+        { content: 'Docker Compose·GitLab CI 배포, HTTPS·CSP·HSTS 적용' },
+      ],
+    },
+    {
+      title: 'AI 시장동향 데일리 인사이트 리포트 자동화',
+      startedAt: '2026-07',
+      endedAt: '2026-09',
+      where: '한국렌탈',
+      descriptions: [
+        {
+          content:
+            '뉴스 수집 → 출처 정규화 → 신뢰도 필터 → 교차검증 → 선별 → 렌더 파이프라인 (RSS 21종, 1회 300건 이상)',
+        },
+        { content: '회사 전략 컨텍스트 기반 LLM 적합성 판정과 기사별 시사점 생성' },
+        { content: 'Local MCP 서버(도구 4종)로 제품화, 비개발자용 설치 패키지·OS별 가이드 배포' },
+      ],
+    },
+    {
+      title: 'AI 견적서 자동생성 MCP 인턴십 멘토',
+      startedAt: '2026-07',
+      endedAt: '2026-08',
+      where: '한국렌탈',
+      descriptions: [
+        {
+          content:
+            '인턴 2명 대상 3주 과정 멘토링: MCP 프로토콜, DMZ → MCP → ERP 아키텍처, Spring AI 도구 개발, 배포',
+        },
+        {
+          content:
+            '인턴들이 실 API 연동 견적 도구(자산 검색, 비용 계산, 견적서 발행 등) 완성·원격 배포까지 수행',
+        },
+      ],
+    },
+    {
+      title: 'ERP 자산정보 MCP 서버 구축 및 Gemini Enterprise 연동',
+      startedAt: '2026-05',
+      endedAt: '2026-09',
+      where: '한국렌탈',
+      descriptions: [
+        { content: '사내 ERP 자산 정보를 AI에서 조회하는 MCP 도구 6종 개발·운영 배포' },
+        {
+          content:
+            '인증을 Bearer → OAuth 2.0 → GWS 연동 로그인 → Claude SSO(PKCE, RFC 7591 DCR)로 3단계 고도화',
+        },
+        {
+          content:
+            '내부망 ERP → MCP → DMZ → GCP 전 경로 구성, Claude Code·Gemini Enterprise E2E 검증',
+        },
+      ],
+    },
+    {
+      title: '계약서 AI 검토 서비스(Contract-Guard) 구축 및 그룹웨어 연동',
+      startedAt: '2026-03',
+      endedAt: '2026-08',
+      where: '한국렌탈',
+      descriptions: [
+        {
+          content:
+            'v1 동기 웹 시연 + v2 REST API(접수 202, HMAC-SHA256 서명 콜백) 이원 구조, 헥사고날 설계',
+        },
+        {
+          content:
+            '지침(검토 방법론)과 지식(표준계약서 비교기준)을 나눈 RAG, 조항별 원문→수정안→이유 구조화 출력',
+        },
+        {
+          content:
+            'PDF·DOCX·HWP·HWPX·이미지 OCR 추출, 프롬프트 v2.0~v2.9 고도화(인젝션 방어, 버전 고정)',
+        },
+        { content: 'Terraform으로 Cloud Run·Cloud SQL·GCS 인프라 100% 코드화' },
+      ],
+    },
+    {
+      title: '사내 규정 RAG 챗봇 구축 및 사내 오픈',
+      startedAt: '2026-01',
+      endedAt: '2026-06',
+      where: '한국렌탈',
+      descriptions: [
+        {
+          content:
+            'Google Chat 기반 챗봇. 쿼리 확장 → 다중 검색 → LLM 적합성 평가 → 권한 필터 → Gemini 답변 → 인용 표기 파이프라인 구현',
+        },
+        { content: 'Vertex AI Search Enterprise와 Layout Parser로 규정 문서 색인' },
+        {
+          content: '직책 기반 열람권한 필터(10분 주기 권한 맵 갱신), 슬래시 명령 2종(일정·할 일)',
+        },
+        { content: '권한 필터 적용률 100%, 검색 추가비용 0원', weight: 'MEDIUM' },
+      ],
+    },
+    {
+      title: 'AI 생태계 편입 기술 검증 — 그라운딩과 MCP를 통한 제품 연계',
+      startedAt: '2025-08',
+      endedAt: '2025-12',
+      where: '드림시큐리티',
+      descriptions: [
+        {
+          content:
+            'CTO 테크포럼의 편입 전략(그라운딩·MCP, 컨텍스트 엔지니어링)을 자사 DID 제품으로 PoC 검증',
+        },
+        {
+          content:
+            'Spring AI MCP 서버 응용 개발, Claude Agent Skill 구성, 문서·로그·DB 스키마 컨텍스트 엔지니어링',
+        },
+        {
+          content:
+            '개발자 SDK 코드 생성, 운영자 장애 진단, 관리자 운영 보고서 자동 생성 3개 시나리오 검증',
+        },
+        {
+          content: '코드 확보 5분 → 10초 · 장애 대응 4시간 → 10분 · 보고 준비 2시간 → 1분',
+          weight: 'MEDIUM',
+        },
+      ],
+    },
+    {
       title: 'Hyperledger Fabric 플랫폼 관리자 솔루션 신규 제품 개발',
       startedAt: '2022-02',
       where: '드림시큐리티',

@@ -1,9 +1,9 @@
 {
   "name": "resume",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Static HTML based online resume",
   "main": "index.js",
-  "lastestUpdatedAt": "2024-07-29",
+  "lastestUpdatedAt": "2026-10-22",
   "homepage": "https://hyeonseokhan.github.io/resume",
   "repository": {
     "type": "git",

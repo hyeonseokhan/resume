@@ -6,8 +6,49 @@ const experience: IExperience.Payload = {
   list: [
     {
       title: '드림시큐리티',
+      startedAt: '2025-01',
+      positions: [
+        {
+          position: '중앙연구소 AI보안기술연구실 AI기술팀 2파트 파트장',
+          descriptions: [
+            'AI 생태계 편입 전략(2025.08 CTO 테크포럼)의 핵심 기술인 그라운딩·MCP·컨텍스트 엔지니어링 PoC 및 검증',
+            'Spring AI 기반 MCP 서버로 자사 DID 제품을 AI 에이전트에 연계하는 PoC 3건 수행·결과 발표(2025.12)',
+            '계열사 한국렌탈 IT본부 AX TF 지원 (2026.01 ~ 2026.09)',
+          ],
+          skillKeywords: [
+            'MCP',
+            'RAG',
+            'Context Engineering',
+            'Spring AI',
+            'Java',
+            'Springboot',
+            'GCP',
+          ],
+        },
+        {
+          position: 'IT이노베이션실 AI혁신 TF 팀원',
+          startedAt: '2026-07',
+          concurrent: true,
+          descriptions: [
+            '회장 지시 과제로 사내 AI 도구 마켓플레이스 AX Store 기획·구축·운영',
+            'AI 에이전트에서 사내 도구를 검색·설치·등록하는 MCP 서버와 OAuth 기반 연결 인가 구현',
+          ],
+          skillKeywords: [
+            'MCP',
+            'OAuth 2.0',
+            'Spring Authorization Server',
+            'React',
+            'Docker',
+            'GitLab CI',
+          ],
+        },
+      ],
+    },
+    {
+      title: '드림시큐리티',
       position: '미래기술연구소 Hyperledger Fabric 관리자 솔루션 개발 파트장',
       startedAt: '2024-07',
+      endedAt: '2024-12',
       descriptions: [
         '블록체인 관리자 솔루션 안정화 버전 개발',
         '이더리움 블록체인 연계를 위한 연구과제 참여',

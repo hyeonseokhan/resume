@@ -48,20 +48,32 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 }
 
 function getFormattingExperienceTotalDuration(payload: IExperience.Payload) {
-  const durations = payload.list
+  const periods = payload.list
     .map((item) => {
       return {
-        endedAt: item.endedAt
+        // 종료월도 근무한 달이므로 다음 달 1일을 구간 끝으로 둔다
+        endedAt: (item.endedAt
           ? DateTime.fromFormat(item.endedAt, Util.LUXON_DATE_FORMAT.YYYY_LL)
-          : DateTime.local(),
+          : DateTime.local()
+        ).plus({ month: 1 }),
         startedAt: DateTime.fromFormat(item.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
       };
     })
-    .map(({ endedAt, startedAt }) => {
-      return endedAt.plus({ month: 1 }).diff(startedAt);
-    });
+    .sort((a, b) => a.startedAt.toMillis() - b.startedAt.toMillis());
 
-  const totalExperience = durations.reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
+  // 기간이 겹치는 항목(겸임 등)을 두 번 세지 않도록 구간을 합친 뒤 더한다
+  const merged = periods.reduce<typeof periods>((acc, cur) => {
+    const last = acc[acc.length - 1];
+    if (last && cur.startedAt <= last.endedAt) {
+      last.endedAt = cur.endedAt > last.endedAt ? cur.endedAt : last.endedAt;
+      return acc;
+    }
+    return [...acc, { ...cur }];
+  }, []);
+
+  const totalExperience = merged
+    .map(({ endedAt, startedAt }) => endedAt.diff(startedAt))
+    .reduce((prev, cur) => prev.plus(cur), Duration.fromMillis(0));
 
   return totalExperience.toFormat(`총 ${Util.LUXON_DATE_FORMAT.DURATION_KINDNESS}`);
 }

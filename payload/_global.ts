@@ -3,7 +3,7 @@ import previewImage from '../asset/preview.jpg';
 import { IGlobal } from '../components/common/IGlobal';
 
 const title = 'Hyeonseok Han - Online Resume';
-const description = 'This web page is online resume';
+const description = 'AI를 업무와 제품에 연결하는 AX 연구원 한현석의 온라인 이력서';
 
 export const _global: IGlobal.Payload = {
   favicon,
@@ -19,7 +19,7 @@ export const _global: IGlobal.Payload = {
           url: previewImage,
           width: 800,
           height: 600,
-          alt: 'Blockchain Engineer',
+          alt: 'AX Engineer',
         },
       ],
       type: 'profile',

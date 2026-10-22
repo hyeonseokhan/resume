@@ -18,16 +18,59 @@ export default function ExperienceRow({
         </Col>
         <Col sm={12} md={9}>
           <h4>{item.title}</h4>
-          <i style={Style.gray}>{item.position}</i>
-          <ul className="pt-3">
-            {item.descriptions.map((description, descIndex) => (
-              <li key={descIndex.toString()}>{description}</li>
-            ))}
-            {createSkillKeywords(item.skillKeywords)}
-          </ul>
+          {item.positions ? (
+            item.positions.map((position, positionIndex) => (
+              <div key={positionIndex.toString()} className={positionIndex > 0 ? 'pt-2' : ''}>
+                <i style={Style.gray}>{position.position}</i>
+                {createPositionMeta(position)}
+                {createDescriptions(position.descriptions, position.skillKeywords)}
+              </div>
+            ))
+          ) : (
+            <>
+              <i style={Style.gray}>{item.position}</i>
+              {createDescriptions(item.descriptions ?? [], item.skillKeywords)}
+            </>
+          )}
         </Col>
       </Row>
     </div>
+  );
+}
+
+function createDescriptions(descriptions: string[], skillKeywords?: string[]) {
+  return (
+    <ul className="pt-3">
+      {descriptions.map((description, descIndex) => (
+        <li key={descIndex.toString()}>{description}</li>
+      ))}
+      {createSkillKeywords(skillKeywords)}
+    </ul>
+  );
+}
+
+function createPositionMeta(position: IExperience.Position) {
+  if (!position.concurrent && !position.startedAt) {
+    return '';
+  }
+  const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
+  const format = (value: string) =>
+    DateTime.fromFormat(value, DATE_FORMAT.YYYY_LL).toFormat(DATE_FORMAT.YYYY_DOT_LL);
+  const period = position.startedAt
+    ? `${format(position.startedAt)} ~${position.endedAt ? ` ${format(position.endedAt)}` : ''}`
+    : '';
+
+  return (
+    <span className="ml-2">
+      {position.concurrent ? (
+        <Badge className="mr-1" style={Style.concurrentBadge}>
+          겸임
+        </Badge>
+      ) : (
+        ''
+      )}
+      <small style={Style.gray}>{period}</small>
+    </span>
   );
 }
 

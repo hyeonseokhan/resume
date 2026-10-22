@@ -9,6 +9,7 @@ type TStyleKey =
   | 'downloadBtn'
   | 'toolTip'
   | 'skillKeywordBadge'
+  | 'concurrentBadge'
   | 'footerCover';
 
 export const Style: Record<TStyleKey, CSSProperties> = {
@@ -60,6 +61,12 @@ export const Style: Record<TStyleKey, CSSProperties> = {
   },
   skillKeywordBadge: {
     fontWeight: 400,
+  },
+  concurrentBadge: {
+    fontWeight: 400,
+    color: '#3c78d8',
+    backgroundColor: 'transparent',
+    border: '1px solid #3c78d8',
   },
   footerCover: {
     backgroundColor: '#f5f5f5',

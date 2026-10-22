@@ -48,9 +48,27 @@ const blockchain: ISkill.Skill = {
   ],
 };
 
+const ai: ISkill.Skill = {
+  category: 'AI Engineering',
+  items: [
+    { title: 'MCP' },
+    { title: 'RAG' },
+    { title: 'Context Engineering' },
+    { title: 'Prompt Engineering' },
+    { title: 'Spring AI' },
+    { title: 'Vertex AI Search' },
+    { title: 'Gemini' },
+    { title: 'Claude Agent Skill' },
+  ],
+};
+
 const infra: ISkill.Skill = {
   category: 'Infrastructure',
   items: [
+    {
+      title: 'GCP',
+      level: 2,
+    },
     {
       title: 'OCI',
       level: 3,
@@ -60,8 +78,16 @@ const infra: ISkill.Skill = {
       level: 3,
     },
     {
+      title: 'PostgreSQL',
+      level: 2,
+    },
+    {
       title: 'MySQL',
       level: 3,
+    },
+    {
+      title: 'Nginx',
+      level: 2,
     },
     {
       title: 'Terraform',
@@ -80,6 +106,10 @@ const knowledge: ISkill.Skill = {
     {
       title: 'Spring',
       level: 3,
+    },
+    {
+      title: 'OAuth 2.0',
+      level: 2,
     },
     {
       title: 'PKI',
@@ -144,6 +174,9 @@ const tools: ISkill.Skill = {
       title: 'Vim',
     },
     {
+      title: 'Claude Code',
+    },
+    {
       title: 'Git',
     },
     {
@@ -155,7 +188,7 @@ const tools: ISkill.Skill = {
 const skill: ISkill.Payload = {
   disable: false,
   disableLevel: true,
-  skills: [programmingLanguages, blockchain, infra, knowledge, tools],
+  skills: [ai, programmingLanguages, infra, knowledge, blockchain, tools],
 };
 
 export default skill;

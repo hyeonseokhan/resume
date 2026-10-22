@@ -4,12 +4,12 @@ import { lastestUpdatedAt, author } from '../package.json';
 const introduce: IIntroduce.Payload = {
   disable: false,
   contents: [
-    '공개 키 기반 구조(Public Key Infrastructure, PKI) 보안 인증솔루션 기술력을 바탕으로 탈중앙화 신원 증명(Decentralized Identity, DID)과 블록체인을 활용한 응용개발의 경험이 있습니다.',
-    '주로 스프링 프레임워크를 이용한 RESTful API 백엔드 개발을 담당하였으나 업무의 영역을 가리지 않고 프로젝트 진행에 있어 발생하는 문제를 고민하고 해결하는 것을 좋아합니다.',
-    '최근에는 허가형 블록체인 플랫폼인 Hyperledger Fabric의 성능 개선 및 실사용 측면에 관심이 있습니다.',
-    'I am an experienced application developer using decentralized identity (DID) and blockchain based on the technology of the Public Key Infrastructure (PKI) security authentication solution.',
-    'I was mainly in charge of RESTful API backend development using the Java spring framework. Furthermore, I like to focus on the process of considering and solving problems that occurs during any of project progresses.',
-    'In addition, I recently got interested in the performance improvement and practical use of Hyperledger Fabric a permission blockchain platform.',
+    'PKI 보안 인증 솔루션과 블록체인·DID 응용개발로 쌓은 백엔드 역량을 바탕으로, 지금은 AI를 실제 업무와 제품에 연결하는 AX(AI Transformation) 연구원으로 일하고 있습니다.',
+    '그라운딩, MCP, 컨텍스트 엔지니어링으로 사내 시스템과 데이터를 AI 에이전트에 안전하게 연결하는 일을 주로 맡고 있습니다. 규정 RAG 챗봇, 계약서 AI 검토, ERP 연계 MCP 서버, 사내 AI 도구 마켓플레이스를 PoC부터 운영 배포까지 직접 만들었습니다.',
+    '최근에는 AI 에이전트가 사내 시스템을 도구로 직접 다루는 환경에서의 인증·권한 체계와, AI 결과물을 재현하고 검증할 수 있게 만드는 품질 관리 방식에 관심이 있습니다.',
+    'Building on backend experience in PKI security authentication, blockchain and decentralized identity (DID), I now work as an AX (AI Transformation) researcher who connects AI to real business processes and products.',
+    'My focus is connecting internal systems and data to AI agents safely through grounding, MCP and context engineering. I have taken a policy RAG chatbot, an AI contract review service, an ERP-linked MCP server and an internal AI tool marketplace from PoC to production.',
+    'Lately I am interested in authentication and authorization for agents that operate internal systems as tools, and in quality practices that make AI output reproducible and verifiable.',
   ],
   sign: author.name,
   latestUpdated: lastestUpdatedAt,
